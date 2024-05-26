@@ -2,9 +2,18 @@
   .heading {
     color: #fff;
     font-size: 4em;
-    padding: 40px 0;
+    padding: 40px 0px 10px 0px;
+    text-align: center;
+    font-weight: 500;
+    background: #1d061a;
+  }
+  .sub-heading {
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 0;
     text-align: center;
     background: #1d061a;
+    font-weight: 500;
   }
   .container {
     display: flex;
