@@ -21,7 +21,12 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "allowedCommonJsDependencies": [
-              "rxjs-compat"
+              "rxjs-compat",
+              "simplex-noise",
+              "debounce",
+              "hsl-to-hex",
+              "@pixi/filter-kawase-blur",
+              "pixi.js"
             ],
             "polyfills": [
               "zone.js"
