@@ -153,12 +153,12 @@ export class AboutUsComponent implements OnInit, OnDestroy {
     }
 
     this.app = new PIXI.Application({
-      view: document.querySelector('.orb-canvas'),
+      view: document.querySelector('.orb-canvas') as HTMLCanvasElement,
       resizeTo: window,
-      transparent: true
+      backgroundAlpha: 0
     });
 
-    this.app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
+    this.app.stage.filters = [new KawaseBlurFilter(30, 10, true) as unknown as PIXI.Filter];
     this.colorPalette = new ColorPalette();
 
     for (let i = 0; i < 10; i++) {
