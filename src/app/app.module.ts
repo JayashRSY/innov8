@@ -7,8 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
-import { BlogSectionComponent } from './components/blog-section/blog-section.component';
 import { ServiceSectionComponent } from './components/service-section/service-section.component';
+import { WorkSectionComponent } from './components/work-section/work-section.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { CursorComponent } from './components/cursor/cursor.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -23,6 +23,7 @@ import { DesignComponent } from './pages/design/design.component';
 import { DevelopmentComponent } from './pages/development/development.component';
 import { Web3Component } from './pages/web3/web3.component';
 import { AiComponent } from './pages/ai/ai.component';
+import { WaveComponent } from './components/wave/wave.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +32,8 @@ import { AiComponent } from './pages/ai/ai.component';
     HomeComponent,
     ServiceCardComponent,
     BlogCardComponent,
-    BlogSectionComponent,
     ServiceSectionComponent,
+    WorkSectionComponent,
     HeroSectionComponent,
     CursorComponent,
     FooterComponent,
@@ -46,7 +47,8 @@ import { AiComponent } from './pages/ai/ai.component';
     DesignComponent,
     DevelopmentComponent,
     Web3Component,
-    AiComponent
+    AiComponent,
+    WaveComponent
   ],
   imports: [
     BrowserModule,

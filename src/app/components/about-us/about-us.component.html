@@ -1,0 +1,84 @@
+<div id="about"
+    class="about-us">
+    <div class="container">
+        <h2>Welcome to Our World of Innovation</h2>
+        <p>At Innov8, we believe in the power of design and technology to shape the future of businesses.
+            Our
+            journey began with a simple yet profound vision: to seamlessly integrate creativity and strategy into every
+            aspect of our work, fostering meaningful connections between brands and their audiences.</p>
+
+        <h3>Our Mission</h3>
+        <p>Our mission is to redefine industry standards by providing innovative solutions that not only meet the needs
+            of
+            today but anticipate the challenges of tomorrow. We strive to empower businesses to thrive in an
+            ever-evolving
+            digital landscape through our expertise in design, technology, and strategy consulting.</p>
+
+        <h3>Why Choose Us?</h3>
+        <div class="grid">
+            <div class="card gradient-background">
+                <h3>Forward-Thinking Approach</h3>
+                <div class="expandable-content">
+                    <p>We don't just follow trends; we set them. Our team is constantly pushing boundaries, exploring
+                        new
+                        technologies, and embracing emerging trends to deliver cutting-edge solutions.</p>
+                    <p>Our forward-thinking approach ensures that we stay ahead of the curve and deliver innovative
+                        solutions
+                        that
+                        drive success.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Collaborative Partnership</h3>
+
+                <div class="expandable-content">
+                    <p>We believe in the power of collaboration. By working closely with our clients, we gain a deep
+                        understanding of their goals, challenges, and vision, allowing us to tailor our solutions to
+                        their
+                        unique needs.</p>
+                    <p>We value collaboration and believe that the best results are achieved when we work together with
+                        our
+                        clients
+                        as trusted partners.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Exceptional Expertise</h3>
+                <div class="expandable-content">
+                    <p>With a team of skilled professionals experienced in a wide range of technologies and industries,
+                        we
+                        have
+                        the expertise to tackle even the most complex projects with confidence and precision.</p>
+                    <p>Our team's exceptional expertise enables us to tackle complex projects with confidence and
+                        deliver
+                        outstanding results.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    <div class="mini-card">
+        <h3>Our Pillars of Excellence</h3>
+        <div class="card-container">
+            <div *ngFor="let pillar of pillars"
+                [ngStyle]="{'--random-color': pillar.color}">
+                <p>{{ pillar.name }}</p>
+            </div>
+        </div>
+    </div>
+
+
+        <h3>Let's Bring Your Vision to Life</h3>
+        <p>Whether you're a startup looking to make your mark or an established enterprise seeking to innovate, we're
+            here
+            to help. Let's embark on a journey together to transform your ideas into reality and create experiences that
+            leave a lasting impression.</p>
+        <a routerLink="/footer"
+            class="btn-accent">Get in Touch</a>
+    </div>
+</div>

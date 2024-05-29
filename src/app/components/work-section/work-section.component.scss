@@ -1,0 +1,75 @@
+.container {
+  .heading {
+    color: #fff;
+    font-size: 4em;
+    padding: 40px 0px 10px 0px;
+    text-align: center;
+    background-color: rgb(22, 20, 24);
+    font-weight: 500;
+  }
+  .sub-heading {
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgb(22, 20, 24);
+    font-weight: 500;
+  }
+}
+/* app.component.css */
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 20, 24);
+  color: #eee;
+  user-select: none;
+  height: 100vh;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 80vw; /* Adjust as needed */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-control {
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.carousel-control:focus {
+  outline: none;
+}
+
+.prev {
+  position: absolute;
+  left: 0;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+}
+

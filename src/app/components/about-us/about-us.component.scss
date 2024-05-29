@@ -1,0 +1,222 @@
+:host {
+  .about-us {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    margin: 0;
+    padding: 5rem;
+    background: linear-gradient(85deg, #abb1a3, #40c9ff, #7a52b9, #e81cff);
+    background-size: 240% 240%;
+    animation: gradient-animation 10s ease infinite;
+  }
+
+  .container {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  h2,
+  h3 {
+    color: #45caff;
+    font-weight: 700;
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 20px;
+    // box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+    //   -8px -8px 15px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    // box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2),
+    //   -12px -12px 20px rgba(255, 255, 255, 0.9);
+  }
+
+  .icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #3a86ff;
+  }
+
+  .expandable-content {
+    padding-top: 20px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .expandable-content h3 {
+    color: #3a86ff;
+  }
+
+  .contact-button {
+    display: inline-block;
+    background-color: #3a86ff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-button:hover {
+    background-color: #2c6dcc;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  li:before {
+    content: "•";
+    color: #3a86ff;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -4px;
+  }
+}
+.btn-accent {
+    width: 10rem;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #56ccf2 0%,
+    #2f80ed 51%,
+    #56ccf2 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-accent:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.mini-card {
+    font-family: Arial, sans-serif;
+    // background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+h3 {
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card-container > div {
+    border-radius: 10px;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+}
+
+.card-container > div::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--random-color);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.card-container > div:hover::before {
+    top: -70%;
+    left: -70%;
+    width: 240%;
+    height: 240%;
+}
+
+.card-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-container > div p {
+    margin: 0;
+    z-index: 2;
+    position: relative;
+}
