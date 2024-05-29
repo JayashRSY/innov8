@@ -20,16 +20,6 @@
             "outputPath": "dist/innov8",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "allowedCommonJsDependencies": [
-              "rxjs-compat",
-              "simplex-noise",
-              "debounce",
-              "hsl-to-hex",
-              "@pixi/filter-kawase-blur",
-              "pixi.js",
-              "earcut",
-              "eventemitter3"
-            ],
             "polyfills": [
               "zone.js"
             ],
@@ -42,21 +32,20 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
