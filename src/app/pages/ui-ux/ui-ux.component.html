@@ -1,59 +1,23 @@
-<div class="ux-container">
+<div class="page-container">
     <section class="hero">
-        <h1>Platform UX/UI</h1>
-        <p>Visual perception principles to let our minds navigate the chaotic world and make meaningful conclusions.</p>
-        <p>Changes in design standards and new technology requirements can have a major impact on businesses. Innov8’s
-            Design Studio provides industrial-strength aesthetics to keep up with the latest developments in branding,
-            user experience, and more.</p>
-        <p>Are you looking to put a closer eye on your user experience and visual identity?</p>
-        <a href="#"
-            class="contact-button">CONTACT US</a>
+        <div class="hero-title">
+            <h1>Platform</h1>
+            <h1 class="ani-grad">UX/UI</h1>
+        </div>
+        <div class="hero-text">Visual perception principles to let our minds navigate the chaotic world and make
+            meaningful conclusions. Changes in
+            design standards and new technology requirements can have a major impact on businesses. Innov8's Design
+            Studio provides
+            industrial-strength aesthetics to keep up with the latest developments in branding, user experience, and
+            more. Are you
+            looking to put a closer eye on your user experience and visual identity? </div>
     </section>
-    <section class="grid-container">
-        <div class="card">
-            <i class="fas fa-users"></i>
-            <h3>User Experience Design</h3>
-            <p>Optimizing user interactions for better satisfaction and engagement.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-sitemap"></i>
-            <h3>Information Architecture</h3>
-            <p>Structuring content effectively to enhance usability.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-exchange-alt"></i>
-            <h3>Interaction Design</h3>
-            <p>Creating intuitive and engaging interactions.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-palette"></i>
-            <h3>UI Kit Design</h3>
-            <p>Developing reusable UI components for consistency.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-cogs"></i>
-            <h3>Design System Development</h3>
-            <p>Establishing a cohesive design language.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-shopping-bag"></i>
-            <h3>Branded Merchandise</h3>
-            <p>Creating products that reflect your brand identity.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-icons"></i>
-            <h3>Iconography Design</h3>
-            <p>Designing icons that enhance visual communication.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-comments"></i>
-            <h3>Messaging & Voice Strategy</h3>
-            <p>Developing a consistent and engaging voice for your brand.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-archive"></i>
-            <h3>Brand Asset Management</h3>
-            <p>Managing and maintaining your brand assets effectively.</p>
+    <section class="card-container">
+        <div class="card"
+            *ngFor="let card of cards">
+            <i [class]="card.icon"></i>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
         </div>
     </section>
 </div>

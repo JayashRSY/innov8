@@ -1,39 +1,21 @@
-<div class="ux-container">
-<section class="hero">
-    <h1>Branding & Design</h1>
-    <p>Authentic emotional connection is our guide to a brand that resonates.</p>
-    <p>Creativity and strategy converge within the idiosyncrasies of a meaningful rally point. Innov8's Consultancy and
-        Design Studio converge to produce your business' creation, extension and evolution to connect with people.
-    </p>
-    <p>Are you looking to grow your brand strategically by creating value for your customers?</p>
-    <a href="#"
-        class="contact-button">CONTACT US</a>
-</section>
-<section class="grid-container">
-    <div class="card">
-        <i class="fas fa-bullseye"></i>
-        <h3>Differentiate</h3>
-        <p>Creating a unique identity that sets your brand apart from competitors.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-check-circle"></i>
-        <h3>Validate</h3>
-        <p>Ensuring your brand strategy is effective and resonates with your audience.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-handshake"></i>
-        <h3>Collaborate</h3>
-        <p>Working together to create a cohesive and compelling brand story.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-seedling"></i>
-        <h3>Cultivate</h3>
-        <p>Nurturing your brand to grow and adapt in a dynamic market.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Innovate</h3>
-        <p>Bringing fresh, creative ideas to drive your brand forward.</p>
-    </div>
-</section>
+<div class="page-container">
+    <section class="hero">
+        <div class="hero-title">
+            <h1>Web</h1>
+            <h1 class="ani-grad">Design</h1>
+        </div>
+        <div class="hero-text">Authentic emotional connection is our guide to a brand that resonates. Creativity and
+            strategy converge within the idiosyncrasies of a meaningful rally point. Innov8's Consultancy and Design
+            Studio converge to produce your business' creation, extension and evolution to connect with people. Are you
+            looking to grow your brand strategically by creating value for your customers?
+        </div>
+    </section>
+    <section class="card-container">
+        <div class="card"
+            *ngFor="let card of cards">
+            <i [class]="card.icon"></i>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+        </div>
+    </section>
 </div>

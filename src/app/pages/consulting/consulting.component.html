@@ -1,59 +1,23 @@
-<div class="ux-container">
-<section class="hero">
-    <h1>Strategy Consulting</h1>
-    <p>Collaboration and data-driven insights to position toward long term goals.</p>
-    <p>Design and technology are the future of business. And for Innov8, the future is now. Our next generation
-        strategy consulting accesses deeper insights earlier, reduces complexities, anticipates what’s around the
-        next curve, and effectively prepares organizations for change.</p>
-    <p>Are you interested in understanding what your customer experience looks like for the future?</p>
-    <a href="#"
-        class="contact-button">CONTACT US</a>
-</section>
-<section class="grid-container">
-    <div class="card">
-        <i class="fas fa-globe"></i>
-        <h3>New Market Entry</h3>
-        <p>Entering new markets strategically to expand reach and impact.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-rocket"></i>
-        <h3>New Product Launch</h3>
-        <p>Bringing innovative products to market with precision and impact.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-briefcase"></i>
-        <h3>New Business Development</h3>
-        <p>Identifying and developing new business opportunities.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-chart-line"></i>
-        <h3>Balance Scorecard</h3>
-        <p>Using balanced scorecards to align business activities with strategy.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-cogs"></i>
-        <h3>Process Design / Reengineering</h3>
-        <p>Redesigning processes to improve efficiency and effectiveness.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-handshake"></i>
-        <h3>M&A Analysis</h3>
-        <p>Analyzing mergers and acquisitions for strategic growth.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-truck"></i>
-        <h3>Supply Chain Optimization</h3>
-        <p>Optimizing supply chains for better performance and cost savings.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-users"></i>
-        <h3>Organizational Change</h3>
-        <p>Managing organizational change to ensure smooth transitions.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-sync-alt"></i>
-        <h3>Change Management</h3>
-        <p>Implementing change management strategies to guide transformations.</p>
-    </div>
-</section>
+<div class="page-container">
+    <section class="hero">
+        <div class="hero-title">
+            <h1>Strategy</h1>
+            <h1 class="ani-grad">Consulting</h1>
+        </div>
+        <div class="hero-text">Collaboration and data-driven insights to position toward long term goals. Design and
+            technology are the
+            future of business. And for Innov8, the future is now. Our next generation strategy consulting accesses
+            deeper insights earlier, reduces complexities, anticipates what’s around the next curve, and effectively
+            prepares organizations for change. Are you interested in understanding what your customer experience looks
+            like for the future?
+        </div>
+    </section>
+    <section class="card-container">
+        <div class="card"
+            *ngFor="let card of cards">
+            <i [class]="card.icon"></i>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+        </div>
+    </section>
 </div>

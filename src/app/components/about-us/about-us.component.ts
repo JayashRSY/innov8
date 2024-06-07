@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -19,21 +19,18 @@ export class AboutUsComponent {
     { name: 'Iconography Design', color: '' },
     { name: 'Brand Asset Management', color: '' },
   ];
-
-  pastelColors = [
-    'rgba(255, 182, 193, 0.3)',  // Light Pink
-    'rgba(255, 223, 186, 0.3)',  // Light Peach
-    'rgba(255, 239, 186, 0.3)',  // Light Yellow
-    'rgba(186, 255, 201, 0.3)',  // Light Green
-    'rgba(186, 255, 255, 0.3)',  // Light Cyan
-    'rgba(186, 213, 255, 0.3)',  // Light Blue
-    'rgba(221, 186, 255, 0.3)',  // Light Purple
-    'rgba(255, 186, 255, 0.3)'   // Light Magenta
-  ];
-
-  ngOnInit(): void {
-    this.pillars.forEach(pillar => {
-      pillar.color = this.pastelColors[Math.floor(Math.random() * this.pastelColors.length)];
-    });
-  }
+  cards = [
+    {
+      title: 'Forward-Thinking Approach',
+      content: 'We don\'t just follow trends; we set them.Our team is constantly pushing boundaries, exploring new technologies, and embracing emerging trends to deliver cutting- edge solutions. Our forward - thinking approach ensures that we stay ahead of the curve and deliver innovative solutions that drive success.'
+    },
+    {
+      title: 'Collaborative Partnership',
+      content: 'We believe in the power of collaboration. By working closely with our clients, we gain a deep understanding of their goals, challenges, and vision, allowing us to tailor our solutions to their unique needs. We value collaboration and believe that the best results are achieved when we work together with our clients as trusted partners.'
+    },
+    {
+      title: 'Exceptional Expertise',
+      content: 'With a team of skilled professionals experienced in a wide range of technologies and industries, we have the expertise to tackle even the most complex projects with confidence and precision. Our team\'s exceptional expertise enables us to tackle complex projects with confidence and deliver outstanding results.'
+    }
+  ]
 }

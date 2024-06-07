@@ -1,208 +1,102 @@
-$logo-size: 5.5rem;
-
-.header {
-  position: relative;
-  padding: 10rem 0rem 0rem 0rem;
-  background: linear-gradient(#e8eef2, #d3dde4);
-  overflow: hidden;
-}
-@keyframes rotate360 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.logo {
-  position: relative;
-  width: $logo-size;
-  height: 7.5rem;
-  margin: 0 auto 3rem;
-  background: url("../../../assets/images/8.png") 50% / cover;
-  opacity: 0;
-  transform: rotate(-2turn) scale(0);
-  animation: fade-content 1s 1.2s cubic-bezier(0.2, 1, 0.2, 1) forwards,
-    rotate360 5s linear infinite;
-}
-
-.slogan {
-  max-width: 630px;
-  margin: 0 auto 3.5rem;
-  color: #023161;
-  font: 100 26px / 1.5 sans-serif;
-  text-shadow: 0 1px 1px rgba(#000, 0.2);
-  text-transform: capitalize;
-  opacity: 0;
-  transform: perspective(800px) rotateX(-60deg) translateY(50px);
-  animation: fade-content 0.85s 2.1s cubic-bezier(0.2, 1, 0.2, 1) forwards;
-}
-
-.slogan .ps {
-  color: #fff;
-  //   text-transform: lowercase;
-  text-shadow: 0 1px 2px rgba(#001e32, 0.15);
-}
-
-.btns {
-  display: flex;
-  margin-bottom: 5rem;
-  margin-left: 5rem;
-  .btn-accent {
-    cursor: pointer;
-    border: none;
-    background-image: linear-gradient(
-      to right,
-      #56ccf2 0%,
-      #2f80ed 51%,
-      #56ccf2 100%
-    );
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
+:host {
+  header {
+    background-color: black;
     color: white;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
+    height: 100vh;
+    padding-top: 30vh;
+    .title {
+      width: auto;
+      text-align: center;
+      color: #e3e4e6;
+      h1 {
+        font-size: 3rem;
+        font-weight: 200;
+        margin-bottom: 1rem;
+        span {
+          font-size: 3rem;
+          font-weight: 700;
+          // color: #aa77ff;
+        }
+      }
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin-bottom: 1rem;
+        span {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: white;
+        }
+      }
+    }
+    .hero-icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      img:first-child {
+        padding-left: 200px;
+      }
+      img:nth-child(2) {
+        cursor: pointer;
+        z-index: 2;
+      }
+      img:hover {
+        transform: scale(1.1);
+      }
+    }
+    .wave-container {
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      .ocean {
+        min-height: 460px;
+        width: 100vw;
+        // margin: 0 auto;
+        // max-width: 960px;
+        overflow: hidden;
+        position: relative;
+        // background: #015871;
+      }
+      .wave {
+        background: url("../../../assets/images/wave-grey.svg") repeat-x;
+        position: absolute;
+        bottom: 0;
+        width: 6400px;
+        height: 198px;
+        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+        transform: translate3d(0, 0, 0);
+        filter: invert(80%);
+        mix-blend-mode: difference;
+      }
+      .wave:nth-of-type(2) {
+        bottom: 25px;
+        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+          swell 7s ease -1.25s infinite;
+        opacity: 1;
+      }
+      @keyframes wave {
+        0% {
+          margin-left: 0;
+        }
+        100% {
+          margin-left: -1600px;
+        }
+      }
+
+      @keyframes swell {
+        0%,
+        100% {
+          transform: translate3d(0, -25px, 0);
+        }
+        50% {
+          transform: translate3d(0, 5px, 0);
+        }
+      }
+    }
   }
-
-  .btn-accent:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .btn-primary {
-    cursor: pointer;
-    border: none;
-    background-image: linear-gradient(
-      to right,
-      #da22ff 0%,
-      #9733ee 51%,
-      #da22ff 100%
-    );
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    // box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-  }
-  .btn-primary:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
-.circle {
-  position: absolute;
-  top: calc(50% - 10vw);
-  left: calc(50% - 50vw);
-  width: 200vw;
-  height: 200vw;
-  border-radius: 50%;
-  background-color: rgba(#f00, 0.1);
-  background-image: linear-gradient(
-    45deg,
-    rgba(#ffb367, 0.75) 55%,
-    rgba(#b95dd7, 0.75),
-    rgba(#00d7b9, 0.75) 72%
-  );
-  transform: translate(100%, 500px);
-  animation: fade-content 1.2s 0.7s cubic-bezier(0.2, 1, 0.2, 1) forwards;
-  mix-blend-mode: darken;
-}
-
-.circle.c2 {
-  top: calc(50% - 1vw);
-  left: calc(50% - 90vw);
-  width: 250vw;
-  height: 250vw;
-  background-image: linear-gradient(
-    45deg,
-    rgba(#ffcf9f, 0.75) 62.5%,
-    rgba(#ce97df, 0.75),
-    rgba(#8dc6d8, 0.75) 70%
-  );
-  animation-delay: 0.5s;
-}
-
-.hill {
-  position: relative;
-  height: 8.5rem;
-  overflow: hidden;
-}
-
-.hill::before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  top: 1rem;
-  left: 50%;
-  width: 1000vw;
-  height: 1000vw;
-  transform: translate(calc(-50% + 35vw), 0);
-  background-color: #fff;
-  color: rgba(#000, 0.1);
-  box-shadow: 0 0 0.5rem, 0 0 2rem, 0 0 3rem;
-}
-
-@keyframes fade-content {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  position: relative;
-  margin: 0;
-  min-height: 100vh;
-  padding-top: 1px;
-  padding-bottom: 5rem;
-  text-align: center;
-  overflow-y: scroll;
-}
-
-.info {
-  position: absolute;
-  bottom: 5rem;
-  right: 0;
-  margin: 1em;
-  font-size: 2rem;
-  font-style: italic;
-  font-family: serif;
-  text-align: right;
-  opacity: 0.5;
-}
-
-.info a {
-  color: inherit;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }

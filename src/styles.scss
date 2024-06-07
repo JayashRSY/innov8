@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+@import "animate.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html,
@@ -8,4 +12,236 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
+}
+
+.btn-1 {
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+  padding: 10px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+}
+.btn-1:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+// Animated border button
+.btn-ani-border {
+  color: white; /* White text */
+  background: transparent;
+  border-radius: 50px;
+  // border: 2px solid white;
+  width: 150px;
+  height: 40px;
+  position: relative; /* Position the shadow relative to the button */
+  overflow: hidden; /* Ensure the shadow doesn't overflow outside the button */
+}
+
+/* Define keyframes for the gradient animation */
+@keyframes gradientShadow {
+  0% {
+    box-shadow: 0 0 10px 2px #aa77ff; /* Start shadow */
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #62cdff; /* Middle shadow */
+  }
+  100% {
+    box-shadow: 0 0 10px 2px #aa77ff; /* End shadow */
+  }
+}
+
+/* Apply the gradient shadow animation to the button */
+.btn-ani-border::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 96%;
+  height: 90%;
+  border-radius: inherit; /* Inherit border-radius from button */
+  animation: gradientShadow 3s infinite; /* Apply the gradient shadow animation */
+}
+
+// Animated theme color
+.ani-grad {
+  background: linear-gradient(270deg, #aa77ff, #62cdff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  -o-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+// styles
+
+.heading {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
+}
+.sub-heading {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 2rem 10rem;
+  text-align: center;
+}
+
+// PAGE STYLES
+.page-container {
+  .hero {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    .hero-title {
+      padding-left: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 6rem;
+        color: #e3e4e6;
+      }
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #e3e4e6;
+      font-size: 1.5rem;
+      padding: 2rem 10rem;
+      text-align: center;
+      width: 60%;
+    }
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    .card {
+      background-color: #575757;
+      color: white;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 300px;
+      text-align: center;
+      position: relative; /* Required for pseudo-element positioning */
+
+      i {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: white;
+      }
+      h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+      }
+      p {
+        line-height: 1.5;
+      }
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 12px;
+      z-index: -1;
+      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+      background-size: 400% 400%;
+      animation: gradientBorder 5s linear infinite;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    @keyframes gradientBorder {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
 }

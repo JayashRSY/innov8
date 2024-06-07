@@ -1,44 +1,23 @@
-<div class="ux-container">
-<section class="hero">
-    <h1>Artificial Intelligence</h1>
-    <p>Leveraging Data and AI to Shape the Future of Business</p>
-    <p>In today's rapidly evolving landscape, Artificial Intelligence (AI) is not just an add-on but a necessity for
-        achieving long-term business goals. Innov8's Artificial Intelligence Consulting service is designed to help
-        organizations harness the power of AI to gain deeper insights, automate processes, and drive innovation.</p>
-    <p>Are you ready to unlock the potential of AI in your business?</p>
-    <a href="#"
-        class="contact-button">CONTACT US</a>
-</section>
-<section class="grid-container">
-    <div class="card">
-        <i class="fas fa-chart-line"></i>
-        <h3>AI-Driven Market Analysis</h3>
-        <p>Utilizing AI to analyze market trends and consumer behavior for strategic insights.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-cogs"></i>
-        <h3>Product Enhancement with AI</h3>
-        <p>Integrating AI to enhance product features and capabilities.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-robot"></i>
-        <h3>Business Process Automation</h3>
-        <p>Automating business processes for increased efficiency and productivity.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-database"></i>
-        <h3>Data-Driven Decision Making</h3>
-        <p>Leveraging data and AI to make informed and strategic business decisions.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-truck"></i>
-        <h3>AI in Supply Chain</h3>
-        <p>Applying AI to optimize and innovate supply chain management.</p>
-    </div>
-    <div class="card">
-        <i class="fas fa-people-arrows"></i>
-        <h3>Organizational Adaptation</h3>
-        <p>Helping organizations adapt to AI technologies and transform business operations.</p>
-    </div>
-</section>
+<div class="page-container">
+    <section class="hero">
+        <div class="hero-title">
+            <h1>Artificial</h1>
+            <h1 class="ani-grad">Intelligence</h1>
+        </div>
+        <div class="hero-text">Leveraging Data and AI to Shape the Future of BusinessIn today's rapidly evolving
+            landscape, Artificial
+            Intelligence (AI) is not just an add-on but a necessity for achieving long-term business goals. Innov8's
+            Artificial Intelligence Consulting service is designed to help organizations harness the power of AI to gain
+            deeper insights, automate processes, and drive innovation. Are you ready to unlock the potential of AI in
+            your business?
+        </div>
+    </section>
+    <section class="card-container">
+        <div class="card"
+            *ngFor="let card of cards">
+            <i [class]="card.icon"></i>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+        </div>
+    </section>
 </div>

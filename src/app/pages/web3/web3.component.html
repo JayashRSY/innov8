@@ -1,64 +1,23 @@
-<div class="ux-container">
+<div class="page-container">
     <section class="hero">
-        <h1>Web3 & Blockchain</h1>
-        <p>The combination of cryptographic keys, a peer-to-peer network, and a digital ledger is what makes blockchain
-            technology represent the future.</p>
-        <p>Public ledger distribution provides high security, immutability, and provenance, allowing those with a vision
-            to guide our society to the next level.</p>
-        <p>We support our clients on their web3 & blockchain projects with education and co-creation.</p>
-        <a href="#"
-            class="contact-button">CONTACT US</a>
+        <div class="hero-title">
+            <h1>Web3 &</h1>
+            <h1 class="ani-grad">Blockchain</h1>
+        </div>
+        <div class="hero-text">The combination of cryptographic keys, a peer-to-peer network, and a digital ledger is
+            what makes blockchain technology
+            represent the future. Public ledger distribution provides high security, immutability, and provenance,
+            allowing those
+            with a vision to guide our society to the next level. We support our clients on their web3 & blockchain
+            projects with
+            education and co-creation. </div>
     </section>
-    <section class="grid-container">
-        <div class="card">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <h3>Metaverse & Web3 Strategy Consulting</h3>
-            <p>Guiding your entry and strategy in the metaverse and Web3 spaces.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-cubes"></i>
-            <h3>NFT Development</h3>
-            <p>Creating and managing non-fungible tokens for various applications.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Mobile Wallet Development</h3>
-            <p>Developing secure mobile wallets for cryptocurrency transactions.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-file-contract"></i>
-            <h3>Smart Contract Development</h3>
-            <p>Designing and deploying smart contracts for automated agreements.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-paint-brush"></i>
-            <h3>Branding & Design</h3>
-            <p>Creating a compelling brand identity for your blockchain projects.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-users"></i>
-            <h3>DAO Development</h3>
-            <p>Building decentralized autonomous organizations for community governance.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-cube"></i>
-            <h3>Metaverse 3D Modeling & Architecture</h3>
-            <p>Designing and creating 3D models and virtual spaces for the metaverse.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-search"></i>
-            <h3>User Research & Testing</h3>
-            <p>Conducting research and testing to optimize user experience in Web3.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-desktop"></i>
-            <h3>Web3 UX/UI Design</h3>
-            <p>Designing intuitive and engaging user interfaces for Web3 applications.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-chalkboard"></i>
-            <h3>Metaverse Workshops & Education</h3>
-            <p>Providing workshops and educational sessions on the metaverse.</p>
+    <section class="card-container">
+        <div class="card"
+            *ngFor="let card of cards">
+            <i [class]="card.icon"></i>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
         </div>
     </section>
 </div>

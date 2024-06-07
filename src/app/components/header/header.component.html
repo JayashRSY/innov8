@@ -1,74 +1,18 @@
-<div class="header-container">
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="../../../assets/images/8.png"
-                    alt=""
-                    routerLink="/home">
-                <!-- app.component.html -->
-                <div class="title">
-                    <span class="menu-item">Development
-                        <ul class="dropdown">
-                            <li class="dropdown-item">Custom Web Application Development</li>
-                            <li class="dropdown-item">WordPress Website Development</li>
-                            <li class="dropdown-item">Web3 & Blockchain</li>
-                            <li class="dropdown-item">Artificial Intelligence</li>
-                            <li class="dropdown-item">Mobile App Development (iOS and Android)</li>
-                            <li class="dropdown-item">E-commerce Website Development</li>
-                            <li class="dropdown-item">Content Management System (CMS) Integration</li>
-                        </ul>
-                    </span>
-                    <span class="menu-item">Designing
-                        <ul class="dropdown">
-                            <li class="dropdown-item">Responsive Web Design</li>
-                            <li class="dropdown-item">User Interface (UI) Design</li>
-                            <li class="dropdown-item">User Experience (UX) Design</li>
-                            <li class="dropdown-item">Branding and Logo Design</li>
-                            <li class="dropdown-item">Mobile App UI/UX Design</li>
-                            <li class="dropdown-item">E-commerce Website Design</li>
-                        </ul>
-                    </span>
-                    <span class="menu-item">Marketing
-                        <ul class="dropdown">
-                            <li class="dropdown-item">Social Media Marketing</li>
-                            <li class="dropdown-item">Pay-Per-Click (PPC) Advertising</li>
-                            <li class="dropdown-item">Email Marketing Campaigns</li>
-                            <li class="dropdown-item">Content Marketing Strategy</li>
-                            <li class="dropdown-item">Influencer Marketing Outreach</li>
-                            <li class="dropdown-item">Search Engine Marketing (SEM)</li>
-                        </ul>
-                    </span>
-                </div>
-
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a (click)="scrollToSection('home')">Home</a>
-                </li>
-                <li>
-                    <a (click)="scrollToSection('about')">About</a>
-                </li>
-                <li>
-                    <span class="menu-item">
-                        <a (click)="scrollToSection('services')">Services</a>
-                        <ul class="dropdown">
-                            <li routerLink="/ui-ux" class="dropdown-item">Platform UI/UX</li>
-                            <li routerLink="/consulting" class="dropdown-item">Strategy Consulting</li>
-                            <li routerLink="/design" class="dropdown-item">Branding & Design</li>
-                            <li routerLink="/development" class="dropdown-item">Application Development</li>
-                            <li routerLink="/web3" class="dropdown-item">Web3 & Blockchain</li>
-                            <li routerLink="/ai" class="dropdown-item">Artificial Intelligence</li>
-                        </ul>
-                    </span>
-                </li>
-                <li>
-                    <a (click)="scrollToSection('works')">Works</a>
-                </li>
-                <li>
-                    <a (click)="scrollToSection('footer')">Contact</a>
-                </li>
-            </ul>
-            <button>Contact</button>
-        </nav>
-    </header>
-</div>
+<header class="header">
+    <div class="logo" routerLink="/">
+        <img src="../../../assets/images/8.png"
+            alt=""
+            routerLink="/home">
+        Innov8
+    </div>
+    <ul class="nav-links">
+        <li *ngFor="let link of navbarLinks"
+            [class.ani-grad]="isActive(link.section)">
+            <a (click)="scrollToSection(link.section)">{{ link.label }}
+                <div class="underline"
+                    *ngIf="isActive(link.section)"></div>
+            </a>
+        </li>
+    </ul>
+    <button class="btn-ani-border">Contact</button>
+</header>
