@@ -1,6 +1,7 @@
 {
   "name": "innov8",
   "version": "0.0.0",
+  "author": "Jayash Yadav",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
