@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isMenuOpen = false;
 
   activeSection: string | null = null;
   navbarLinks = [
@@ -28,5 +29,14 @@ export class HeaderComponent {
     }
     this.activeSection = section; // Update active section
 
+  }
+
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }
