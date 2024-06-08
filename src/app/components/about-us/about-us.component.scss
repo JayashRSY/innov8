@@ -1,17 +1,17 @@
 :host {
   #about {
-    padding: 10rem;
+    padding: 10rem 1rem;
     color: white;
     background-color: #2e2e2e;
     .para {
       display: flex;
       justify-content: space-evenly;
-      div:first-child {
-        padding: 0 5rem;
+      .para-1 {
+        padding: 0 1rem;
         font-size: 1.5rem;
       }
-      div:nth-child(2) {
-        padding: 5rem;
+      .para-2 {
+        padding: 1rem;
         font-size: 2rem;
 
         div {
@@ -26,6 +26,7 @@
         }
       }
     }
+
     .cards {
       display: flex;
       margin: 3rem 0;
@@ -94,7 +95,26 @@
       }
       .talk-text {
         padding: 2rem;
-        width: 500px;
+        // width: 500px;
+      }
+    }
+    @media (max-width: 768px) {
+      .para {
+        display: block;
+        text-align: center;
+      }
+      .cards {
+        display: block;
+        margin: 1rem 0;
+      }
+      .talk {
+        display: block;
+        text-align: center;
+        div {
+          .talk-text {
+            // width: 90vw;
+          }
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 <header class="header">
-    <div class="logo" routerLink="/">
+    <div class="logo"
+        routerLink="/">
         <img src="../../../assets/images/8.png"
             alt=""
             routerLink="/home">
@@ -15,4 +16,15 @@
         </li>
     </ul>
     <button class="btn-ani-border">Contact</button>
+    <div class="menu-icon"
+        (click)="toggleMenu()">☰</div>
+    <div class="menu"
+        [ngClass]="{ 'open': isMenuOpen }">
+        <div class="close-btn"
+            (click)="closeMenu()">✖</div>
+        <a *ngFor="let link of navbarLinks"
+            (click)="scrollToSection(link.section); closeMenu()">{{ link.label }}</a>
+        <button class="btn-ani-border"
+            (click)="closeMenu()">Contact</button>
+    </div>
 </header>
