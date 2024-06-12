@@ -5,79 +5,10 @@
     background: black;
     margin-top: auto;
     margin-top: 20rem;
-
-    .container {
-      padding: 0 3rem;
-      .lets-connect {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2rem 0rem;
-        border-bottom: 2px solid white;
-        margin-bottom: 3rem;
-        h1 {
-          font-size: 3rem;
-          font-weight: 100;
-        }
-        .long-arrow {
-          width: 30vw;
-        }
-        button {
-          height: 80px;
-          width: 300px;
-          font-weight: 100;
-          font-size: 2rem;
-        }
-      }
-      @media (max-width: 768px) {
-        .lets-connect {
-          flex-direction: column;
-          h1 {
-            font-size: 2rem;
-          }
-          button {
-            width: 100%;
-          }
-        }
-      }
-      .footer-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-
-        div:first-child {
-          img {
-            height: 50px;
-            filter: invert(100%);
-            mix-blend-mode: difference;
-            margin-top: -30px;
-          }
-          span {
-            font-size: 2rem;
-            font-weight: bolder;
-          }
-          p {
-            margin-top: 20px;
-          }
-        }
-        div:nth-child(2) {
-          display: flex;
-          div {
-            display: flex;
-            flex-direction: column;
-            margin: 0rem 1rem;
-
-            p {
-              margin: 0;
-            }
-            p:hover {
-              cursor: pointer;
-              text-decoration: underline;
-            }
-          }
-        }
-      }
+    .logo-img {
+      height: 50px;
+      filter: invert(100%);
+      mix-blend-mode: difference;
     }
     @keyframes parralax {
       0% {

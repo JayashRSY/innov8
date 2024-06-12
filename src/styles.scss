@@ -7,7 +7,7 @@
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif !important;
   font-weight: 100;
   font-style: normal;
   margin: 0;
@@ -47,6 +47,7 @@ body {
   height: 40px;
   position: relative; /* Position the shadow relative to the button */
   overflow: hidden; /* Ensure the shadow doesn't overflow outside the button */
+  margin: 0 10px;
 }
 
 /* Define keyframes for the gradient animation */
@@ -66,10 +67,10 @@ body {
 .btn-ani-border::before {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 96%;
-  height: 90%;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   border-radius: inherit; /* Inherit border-radius from button */
   animation: gradientShadow 3s infinite; /* Apply the gradient shadow animation */
 }

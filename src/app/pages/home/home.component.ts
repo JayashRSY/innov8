@@ -17,11 +17,11 @@ export class HomeComponent implements OnInit {
 
     //cursors
 
-    rainbowCursor({
-      length: 5,
-      colors: ['pink', 'purple'],
-      size: 4
-    });
+    // rainbowCursor({
+    //   length: 5,
+    //   colors: ['pink', 'purple'],
+    //   size: 4
+    // });
 
     // fairyDustCursor({
     //   colors: ["#ff0000", "#00ff00", "#0000ff"],

@@ -1,64 +1,103 @@
 <div id="about">
-    <div class="para">
-        <div data-aos="zoom-out-down" class="para-1">
-            At Innov8, we believe in the power of design and technology to shape the future of businesses. Our journey
-            began
-            with a simple yet profound vision: to seamlessly integrate creativity and strategy into every aspect of our
-            work, fostering meaningful connections between brands and their audiences.
-        </div>
-        <div data-aos="zoom-out-down" class="para-2">
-            Our mission is to redefine industry standards by providing innovative solutions that not only meet the needs
-            of
-            today but anticipate the challenges of tomorrow. We strive to empower businesses to thrive in an
-            ever-evolving
-            digital landscape through our expertise in design, technology, and strategy consulting.
-            <div>
-                <img src="../../../assets/images/arrow.png"
-                    alt="">
-                Get in Touch
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="row my-5 align-items-center">
+            <div data-aos="zoom-out-down"
+                class="col-lg-6 mb-4">
+                <div class="para-1">
+                    <h2 class="display-4">Welcome to Innov8</h2>
+                    <p class="lead fs-2">
+                        At Innov8, we believe in the power of design and technology to shape the future of businesses.
+                        Our
+                        journey began with a simple yet profound vision: to seamlessly integrate creativity and strategy
+                        into
+                        every aspect of our work, fostering meaningful connections between brands and their audiences.
+                    </p>
+                </div>
+            </div>
+            <div data-aos="zoom-out-down"
+                class="col-lg-6 mb-4">
+                <div class="para-2">
+                    <p class="lead fs-3 fst-italic">
+                        Our mission is to redefine industry standards by providing innovative solutions that not only
+                        meet
+                        the needs of today but anticipate the challenges of tomorrow. We strive to empower businesses to
+                        thrive
+                        in an ever-evolving digital landscape through our expertise in design, technology, and strategy
+                        consulting.
+                    </p>
+                    <div class="mt-3 d-flex align-items-center">
+                        <img src="../../../assets/images/arrow.png"
+                            alt="Arrow"
+                            class="mr-2">
+                        <button href="#contact"
+                            class="btn-ani-border w-50">Get in Touch</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="heading"
-        data-aos="flip-up">
-        Why choose us ?
-    </div>
-    <div class="choose-us">
-        <div class="cards">
-            <div class="card"
+
+        <!-- Why Choose Us Section -->
+        <div class="text-center my-5"
+            data-aos="flip-up">
+            <h2 class="display-5">Why Choose Us?</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4"
                 *ngFor="let card of cards"
                 data-aos="zoom-out-down">
-                <h2>{{card.title}}</h2>
-                <p>{{card.content}}</p>
+                <div class="card h-100 shadow-sm bg-gradient-animation">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">{{card.title}}</h3>
+                        <p class="card-text">{{card.content}}</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-    <div class="heading"
-        data-aos="zoom-out-down">
-        Our pillar of excellence
-    </div>
-    <div class="pillars">
-        <div class="pillar"
-            *ngFor="let pillar of pillars"
+
+        <!-- Our Pillars Section -->
+        <div class="text-center my-5"
             data-aos="zoom-out-down">
-            {{pillar.name}}
+            <h2 class="display-5">Our Pillars of Excellence</h2>
         </div>
-    </div>
-    <div class="talk"
-        data-aos="zoom-out-down">
-        <div>
-            <h1>Let’s bring your vision to life</h1>
-            <div class="arrow-btn">
-                <img src="../../../assets/images/long-arrow.png"
-                    alt="">
-                <button class="btn-ani-border">LET'S TALK</button>
+        <div class="row">
+            <div class="col-md-4 mb-4"
+                *ngFor="let pillar of pillars"
+                data-aos="zoom-out-down">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h3>{{pillar.name}}</h3>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="talk-text">
-            Whether you're a startup looking to make your mark or an established enterprise seeking to innovate, we're
-            here to help.
-            Let's embark on a journey together to transform your ideas into reality and create experiences that
-            leave a lasting impression.
+
+        <!-- Let's Talk Section -->
+        <div class="row align-items-center my-5"
+            data-aos="zoom-out-down">
+            <div class="col-lg-6 mb-4">
+                <h2 class="display-4">Let’s bring your vision to life</h2>
+                <div class="row d-flex align-items-center">
+                    <div class="col-6 col-sm-4 d-flex align-items-center">
+                        <img src="../../../assets/images/long-arrow.png"
+                            alt="Arrow"
+                            class="img-fluid mr-3">
+                    </div>
+                    <div class="col-6 col-sm-8">
+                        <button class="btn btn-ani-border w-100 w-sm-30">LET'S TALK</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 mb-4">
+                <p class="lead">
+                    Whether you're a startup looking to make your mark or an established enterprise seeking to innovate,
+                    we're here to help. Let's embark on a journey together to transform your ideas into reality and
+                    create
+                    experiences that leave a lasting impression.
+                </p>
+            </div>
         </div>
     </div>
 </div>
