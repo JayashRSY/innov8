@@ -18,6 +18,10 @@ import { AiComponent } from './pages/ai/ai.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WorkSectionComponent } from './components/work-section/work-section.component';
 import { RouterModule } from '@angular/router';
+import { WaveComponent } from './components/wave/wave.component';
+import { ChooseUsComponent } from './components/choose-us/choose-us.component';
+import { ReferencesComponent } from './components/references/references.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { RouterModule } from '@angular/router';
     Web3Component,
     AiComponent,
     WorkSectionComponent,
+    WaveComponent,
+    ChooseUsComponent,
+    ReferencesComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

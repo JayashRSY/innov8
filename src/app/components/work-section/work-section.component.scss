@@ -1,0 +1,24 @@
+:host {
+  #works {
+    .slider-container {
+        display: flex;
+        justify-content: center;
+      .slider {
+        display: flex;
+        align-items: center;
+        .box {
+          height: 300px;
+          width: 250px;
+          color: beige;
+          background-color: beige;
+          margin: 10px;
+          border-radius: 10px;
+        }
+        .box:nth-child(2) {
+          height: 450px;
+          width: 350px;
+        }
+      }
+    }
+  }
+}
