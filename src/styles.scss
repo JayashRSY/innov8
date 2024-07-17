@@ -179,7 +179,7 @@ body {
 }
 // NEON BORDER BOX END
 
-// Animated Box Start
+// -----Animated Box Start
 
 .animated-box {
   border-radius: 5px;
@@ -343,10 +343,6 @@ body {
     height: 100vh;
     padding: 2rem; // Add some padding for smaller screens
 
-    @media (min-width: 768px) {
-      flex-direction: row; // Switch back to row for larger screens
-    }
-
     .hero-title {
       padding-left: 5vw; // Use viewport width for padding
       display: flex;
@@ -385,8 +381,9 @@ body {
       padding: 2rem 5vw; // Use viewport width for padding
       text-align: center;
       width: 100%; // Full width for smaller screens
-
-      @media (min-width: 768px) {
+    }
+    @media (min-width: 768px) {
+      .hero-text {
         width: 60%; // Adjust width for larger screens
       }
     }
@@ -399,7 +396,11 @@ body {
       }
     }
   }
-
+  @media (min-width: 768px) {
+    .hero {
+      flex-direction: row; // Switch back to row for larger screens
+    }
+  }
   .card-container {
     display: flex;
     flex-wrap: wrap;

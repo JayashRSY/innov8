@@ -1,103 +1,100 @@
 <div id="about">
     <div class="container">
-        <!-- Introduction Section -->
-        <div class="row my-5 align-items-center">
-            <div data-aos="zoom-out-down"
-                class="col-lg-6 mb-4">
-                <div class="para-1">
-                    <h2 class="display-4">Welcome to Innov8</h2>
-                    <p class="lead fs-2">
-                        At Innov8, we believe in the power of design and technology to shape the future of businesses.
-                        Our
-                        journey began with a simple yet profound vision: to seamlessly integrate creativity and strategy
-                        into
-                        every aspect of our work, fostering meaningful connections between brands and their audiences.
-                    </p>
-                </div>
+        <div class="row">
+            <!-- Left column for image -->
+            <div class="col-md-6">
+                <img src="../../../assets/images/about.svg"
+                    class="img-fluid"
+                    alt="Responsive image">
             </div>
-            <div data-aos="zoom-out-down"
-                class="col-lg-6 mb-4">
-                <div class="para-2">
-                    <p class="lead fs-3 fst-italic">
+            <!-- Right column for heading, content, and button -->
+            <div class="col-md-6">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <h1>Who we are?</h1>
+                    <p>
+                        At vwave, we believe in the power of design and technology to shape the future of businesses.
+                        Our journey began with a
+                        simple yet profound vision: to seamlessly integrate creativity and strategy into every aspect of
+                        our work, fostering
+                        meaningful connections between brands and their audiences.</p>
+                    <p class="text-bold">
                         Our mission is to redefine industry standards by providing innovative solutions that not only
-                        meet
-                        the needs of today but anticipate the challenges of tomorrow. We strive to empower businesses to
-                        thrive
-                        in an ever-evolving digital landscape through our expertise in design, technology, and strategy
-                        consulting.
+                        meet the needs of today
+                        but anticipate the challenges of tomorrow. We strive to empower businesses to thrive in an
+                        ever-evolving digital
+                        landscape through our expertise in design, technology, and strategy consulting.
                     </p>
-                    <div class="mt-3 d-flex align-items-center">
-                        <img src="../../../assets/images/arrow.png"
-                            alt="Arrow"
-                            class="mr-2">
-                        <button href="#contact"
-                            class="btn-ani-border w-50">Get in Touch</button>
-                    </div>
+                    <button class="btn-ani-border">Read More
+                        <!-- <img src="../../../assets/images/icons/arrow-10.svg"
+                            alt=""> -->
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Why Choose Us Section -->
-        <div class="text-center my-5"
-            data-aos="flip-up">
-            <h2 class="display-5">Why Choose Us?</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-4 mb-4"
-                *ngFor="let card of cards"
-                data-aos="zoom-out-down">
-                <div class="card h-100 shadow-sm bg-gradient-animation">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">{{card.title}}</h3>
-                        <p class="card-text">{{card.content}}</p>
+    <div class="container mt-5 pt-5">
+        <div class="animated-box vision-card p-5">
+            <h1 class="m-5 text-center">Guiding Your Journey from <br> Vision to Victory</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="card-container d-flex">
+                            <div class="portrait-card">
+                                <img src="../../../assets/images/Saly-19.svg"
+                                    alt="Card Image"
+                                    class="vision-img">
+                                <div class="card-text">Discussion
+                                    <span class="card-subtext">Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Tempore, eius.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="portrait-card">
+                                <img src="../../../assets/images/Saly-11.svg"
+                                    alt="Card Image"
+                                    class="vision-img">
+                                <div class="card-text">Planning
+                                    <span class="card-subtext">Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Tempore, eius.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="portrait-card">
+                                <img src="../../../assets/images/Saly-10.svg"
+                                    alt="Card Image"
+                                    class="vision-img">
+                                <div class="card-text">Production
+                                    <span class="card-subtext">Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Tempore, eius.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="portrait-card">
+                                <img src="../../../assets/images/Saly-1.svg"
+                                    alt="Card Image"
+                                    class="vision-img">
+                                <div class="card-text">Launch
+                                    <span class="card-subtext">Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Tempore, eius.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="portrait-card">
+                                <img src="../../../assets/images/Sally-32.svg"
+                                    alt="Card Image"
+                                    class="vision-img">
+                                <div class="card-text">Support
+                                    <span class="card-subtext">Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Tempore, eius.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
 
-        <!-- Our Pillars Section -->
-        <div class="text-center my-5"
-            data-aos="zoom-out-down">
-            <h2 class="display-5">Our Pillars of Excellence</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-4 mb-4"
-                *ngFor="let pillar of pillars"
-                data-aos="zoom-out-down">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <h3>{{pillar.name}}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Let's Talk Section -->
-        <div class="row align-items-center my-5"
-            data-aos="zoom-out-down">
-            <div class="col-lg-6 mb-4">
-                <h2 class="display-4">Let’s bring your vision to life</h2>
-                <div class="row d-flex align-items-center">
-                    <div class="col-6 col-sm-4 d-flex align-items-center">
-                        <img src="../../../assets/images/long-arrow.png"
-                            alt="Arrow"
-                            class="img-fluid mr-3">
-                    </div>
-                    <div class="col-6 col-sm-8">
-                        <button class="btn btn-ani-border w-100 w-sm-30">LET'S TALK</button>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-6 mb-4">
-                <p class="lead">
-                    Whether you're a startup looking to make your mark or an established enterprise seeking to innovate,
-                    we're here to help. Let's embark on a journey together to transform your ideas into reality and
-                    create
-                    experiences that leave a lasting impression.
-                </p>
-            </div>
         </div>
     </div>
 </div>

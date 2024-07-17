@@ -1,1 +1,95 @@
-<p>references works!</p>
+<div id="references">
+    <div class="heading">
+        References of collogues <br> and clients
+    </div>
+
+    <div class="profile-container">
+        <div class="profile"
+            *ngFor="let profile of profiles">
+            <img [src]="profile.profile_picture"
+                [alt]="profile.name"
+                class="profile-image">
+            <div class="profile-name">{{ profile.name }}</div>
+        </div>
+    </div>
+    <!-- 1 -->
+    <div class="row border-top p-5">
+        <div class="col-6 p-5">
+            <div class="card mb-4 animated-box"
+                style="border: 1px solid black; border-radius: 5px;">
+                <div class="card-body">
+                    <img [src]="profiles[0].profile_picture"
+                        class="mb-3 border-50 profile-icon"
+                        alt="Icon">
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cumque? Quo sunt
+                        provident debitis ad magnam tenetur, sapiente consequatur molestiae nostrum doloremque nam eos
+                        mollitia culpa quam ipsam veritatis voluptates?</p>
+                    <h5 class="card-title">Laura Adams</h5>
+                    <p class="card-subtitle text-muted">SDE @ Google</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 p-5 d-flex align-items-center">
+            <div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam autem dignissimos pariatur
+                    quisquam expedita debitis, cupiditate id illo sapiente reiciendis quos animi! Culpa quibusdam
+                    officia
+                    magnam
+                    a, ratione dolore distinctio!
+                </div>
+                <div class="d-flex justify-content-end align-items-center mt-3">
+                    <img [src]="profiles[0].profile_picture"
+                        class="border-50 profile-icon"
+                        alt="Icon">
+                    <div class="mx-3">
+                        <h5 class="card-title">Laura Adams</h5>
+                        <p class="card-subtitle">SDE @ Google</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 2 -->
+
+    <div class="row border-top p-5">
+        <div class="col-6 p-5 d-flex align-items-center">
+            <div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam autem dignissimos pariatur
+                    quisquam expedita debitis, cupiditate id illo sapiente reiciendis quos animi! Culpa quibusdam
+                    officia
+                    magnam
+                    a, ratione dolore distinctio!
+                </div>
+                <div class="d-flex justify-content-end align-items-center mt-3">
+                    <img [src]="profiles[0].profile_picture"
+                        class="border-50 profile-icon"
+                        alt="Icon">
+                    <div class="mx-3">
+                        <h5 class="card-title">Laura Adams</h5>
+                        <p class="card-subtitle">SDE @ Google</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-6 p-5">
+            <div class="card mb-4 animated-box"
+                style="border: 1px solid black; border-radius: 5px;">
+                <div class="card-body">
+                    <img [src]="profiles[0].profile_picture"
+                        class="mb-3 border-50 profile-icon"
+                        alt="Icon">
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cumque? Quo sunt
+                        provident debitis ad magnam tenetur, sapiente consequatur molestiae nostrum doloremque nam eos
+                        mollitia culpa quam ipsam veritatis voluptates?</p>
+                    <h5 class="card-title">Laura Adams</h5>
+                    <p class="card-subtitle text-muted">SDE @ Google</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
