@@ -1,0 +1,82 @@
+:host {
+  color: white;
+  #choose-us {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      background-color: black;
+      background: linear-gradient(to top right, #454545, #2c2c2c);
+
+      padding: 50px 20px;
+      margin: 5px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .box0 {
+      display: flex;
+      .box1 {
+        display: flex;
+        flex-direction: column;
+        .box2 {
+          flex-grow: 1;
+        }
+        .box3 {
+          flex-grow: 1;
+        }
+      }
+      .box4 {
+        display: flex;
+        flex-direction: column;
+        .box5 {
+        }
+        .box6 {
+          display: flex;
+          .box7 {
+            flex-grow: 2;
+            display: flex;
+            flex-direction: column;
+            .box8 {
+              flex-grow: 2;
+            }
+            .box9 {
+              flex-grow: 1;
+            }
+          }
+          .box10 {
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+
+    .book-btn {
+      margin: 5rem;
+      display: block;
+      background-color: white;
+      color: black;
+      width: 100%;
+      border-radius: 50px;
+      height: 40px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin-left: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

@@ -1,25 +1,109 @@
 :host {
   #about {
-    padding: 5rem 1rem;
+    padding: 5rem;
     color: white;
-    background-color: #2e2e2e;
-    @keyframes gradient-animation {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
+
+    .btn-ani-border {
+      width: 100%;
+      img {
+        height: 10px;
+        margin-left: 5px;
+        fill: white !important;
       }
     }
 
-    .bg-gradient-animation {
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradient-animation 15s ease infinite;
-      color: white;
+    .vision-card {
+      background: url("../../../assets/images/Vector.svg");
+      .card-container {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .portrait-card {
+        flex: 1;
+        margin: 0 5px;
+        transition: flex 0.3s ease-in-out;
+        border-radius: 10px;
+        display: flex;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .vision-img {
+        height: 10rem;
+        position: absolute;
+        // top: 0;
+      }
+      .card-text {
+        position: absolute;
+        right: -110px;
+        bottom: 130px;
+        white-space: nowrap;
+        transform: rotate(-90deg);
+        color: white;
+        font-size: 3rem;
+        width: 300px;
+        font-weight: 600;
+        transition: transform 0.3s ease-in-out, writing-mode 0.3s ease-in-out;
+
+        .card-subtext {
+          display: none;
+          font-size: medium;
+          font-weight: normal;
+          white-space: wrap;
+        }
+      }
+      .portrait-card:hover {
+        flex: 2;
+        .card-text {
+          position: relative;
+          background: rgba(
+            255,
+            255,
+            255,
+            0.5
+          ); /* White with 50% transparency */
+          backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+          -webkit-backdrop-filter: blur(10px); /* Safari support */
+          border-radius: 10px; /* Optional: add rounded corners */
+          padding: 20px; /* Optional: add some padding */
+          border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: add a border */
+        }
+      }
+      .portrait-card:hover .card-text {
+        transform: rotate(0deg);
+        right: 0px;
+        bottom: -170px;
+        width: 100%;
+        margin: 1rem;
+        height: 50%;
+        color: black;
+
+        .card-subtext {
+          display: block;
+        }
+      }
+
+      .portrait-card:first-child {
+        background-color: #e97770;
+      }
+      .portrait-card:nth-child(2) {
+        background-color: #f3d173;
+      }
+      .portrait-card:nth-child(3) {
+        background-color: #4d4ccf;
+      }
+      .portrait-card:nth-child(4) {
+        background-color: #3b8dde;
+      }
+      .portrait-card:nth-child(5) {
+        background-color: #4ccf7a;
+      }
     }
   }
 }
