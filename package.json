@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "ts-node scripts/set-env.ts",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -25,6 +26,9 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "cursor-effects": "^1.0.15",
+    "dotenv": "^16.4.5",
+    "gapi-script": "^1.2.0",
+    "ng-google-sheets-db": "^2.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
