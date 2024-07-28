@@ -17,6 +17,12 @@ body {
   background-color: $c-dark-grey;
 }
 
+ul, ol {
+    list-style-type: none; /* Removes bullets from unordered lists and numbers from ordered lists */
+    padding: 0;            /* Removes default padding */
+    margin: 0;             /* Removes default margin */
+}
+
 .btn-1 {
   cursor: pointer;
   border: none;
