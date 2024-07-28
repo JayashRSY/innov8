@@ -1,17 +1,35 @@
 <div id="works">
-    <h1 class="heading">Our latest work</h1>
+    <h1 (click)="fetchData()"
+        class="heading">Our latest work</h1>
 
     <div class="slider-container">
         <div class="slider">
-            <div class="box">
-
+            <div class="box box-1">
+                <img [src]="data[0].url"
+                    alt="">
             </div>
-            <div class="box">
-
+            <div class="box  box-2">
+                <img [src]="data[1].url"
+                    alt="">
             </div>
-            <div class="box">
-
+            <div class="box box-3">
+                <img [src]="data[2].url"
+                    alt="">
+            </div>
+            <div class="box box-4">
+                <img [src]="data[3].url"
+                    alt="">
+            </div>
+            <div class="box box-5">
+                <img [src]="data[4].url"
+                    alt="">
             </div>
         </div>
+    </div>
+    <div class="dots-container">
+        <div *ngFor="let dot of dots; let i = index"
+            [ngClass]="{'active': activeIndex === i}"
+            class="dot"
+            (click)="onDotClick(i)"></div>
     </div>
 </div>

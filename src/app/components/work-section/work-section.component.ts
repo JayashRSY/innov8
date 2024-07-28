@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { DataService } from 'src/app/services/data.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-work-section',
@@ -6,17 +9,37 @@ import { Component } from '@angular/core';
   styleUrls: ['./work-section.component.scss']
 })
 export class WorkSectionComponent {
-  items = [1, 2, 3, 4, 5]; // Replace with your data
-  activeIndex = 0; // Initialize active index
+  data: any = []
+  attributesMapping = {
+    work: 'work',
+    title: 'title',
+    url: 'url',
+    description: 'description',
+    client: 'client'
+  }
+  dots = new Array(5);
+  activeIndex: number | null = null;
 
-  constructor() { }
-
-  // Methods for carousel navigation
-  prevSlide() {
-    this.activeIndex = (this.activeIndex === 0) ? this.items.length - 1 : this.activeIndex - 1;
+  constructor(private _dataService: DataService, private googleSheetsDbService: GoogleSheetsDbService) { }
+  ngOnInit(): void {
+    this.fetchData();
   }
 
-  nextSlide() {
-    this.activeIndex = (this.activeIndex === this.items.length - 1) ? 0 : this.activeIndex + 1;
+  fetchData(): void {
+    // this._dataService.getWorkData('Sheet1!A1: D10').subscribe((response: any) => {
+    //   this.data = response.values;
+    //   console.log("🚀 ~ file: work-section.component.ts:22 ~ response:", response);
+    // });
+    this.googleSheetsDbService.get(
+      environment.spreadsheetId,
+      "Sheet1",
+      this.attributesMapping
+    ).subscribe(res => {
+      this.data = res
+    })
+  }
+
+  onDotClick(index: number): void {
+    this.activeIndex = index;
   }
 }
