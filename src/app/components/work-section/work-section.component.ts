@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { DataService } from 'src/app/services/data.service';
-// import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-work-section',
@@ -22,7 +20,7 @@ export class WorkSectionComponent {
   activeIndex: number | null = null;
   intervalId: any;
   currentIndex = 0;
-  constructor(private _dataService: DataService, private googleSheetsDbService: GoogleSheetsDbService) { }
+  constructor(private _dataService: DataService) { }
   ngOnInit(): void {
     this.fetchData();
     this.onDotClick(0)
@@ -41,15 +39,6 @@ export class WorkSectionComponent {
       console.log("🚀 ~ file: work-section.component.ts:41 ~ this.works:", this.works);
       this.onDotClick(0)
     });
-    // this.googleSheetsDbService.get(
-    //   environment.spreadsheetId,
-    //   "Sheet1",
-    //   this.attributesMapping
-    // ).subscribe(res => {
-    //   this.works = res
-    //   this.data = res
-    //   this.onDotClick(0)
-    // })
   }
   private formatSheetData(data: any[]): any[] {
     const headers = data[0];

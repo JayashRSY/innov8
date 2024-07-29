@@ -23,7 +23,6 @@ import { ChooseUsComponent } from './components/choose-us/choose-us.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
-import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -57,13 +56,7 @@ import { environment } from 'src/environments/environment';
     })
 
   ],
-  providers: [
-    {
-      provide: API_KEY,
-      useValue: environment.googleApiKey,
-    },
-    GoogleSheetsDbService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
