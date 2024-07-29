@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-work-section',
@@ -33,10 +33,8 @@ export class WorkSectionComponent {
   }
   fetchData(): void {
     this._dataService.getWorkData().subscribe((res: any) => {
-      console.log("🚀 ~ file: work-section.component.ts:22 ~ response:", res);
       this.works = this.formatSheetData(res.values);
       this.data = this.works
-      console.log("🚀 ~ file: work-section.component.ts:41 ~ this.works:", this.works);
       this.onDotClick(0)
     });
   }

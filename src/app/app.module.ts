@@ -23,7 +23,6 @@ import { ChooseUsComponent } from './components/choose-us/choose-us.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { emojiCursor, bubbleCursor, characterCursor, ghostCursor, rainbowCursor, springyEmojiCursor, fairyDustCursor } from "cursor-effects";
-import * as AOS from 'aos';
+// import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     //animate on scroll
-    AOS.init();
+    // AOS.init();
 
 
     //cursors
