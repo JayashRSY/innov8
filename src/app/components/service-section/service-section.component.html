@@ -1,12 +1,27 @@
 <div id="services">
     <div class="marquee-container">
-        <h1 class="moving-heading">OUR SERVICES</h1>
-        <h1 class="moving-heading">OUR SERVICES</h1>
+        <h1 class="moving-heading-1">
+            <marquee direction="right"
+                scrollamount="5">
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+            </marquee>
+        </h1>
+        <h1 class="moving-heading-2">
+            <marquee scrollamount="20">
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+                <span>our services</span>&nbsp;&nbsp;&nbsp;
+            </marquee>
+        </h1>
     </div>
 
     <div class="service-container">
         <div *ngFor="let service of services"
-            class="service"
+            class="service animated-box in"
             [routerLink]="service.routerLink">
             <h2>{{service.title}}</h2>
             <p>{{service.description}}</p>

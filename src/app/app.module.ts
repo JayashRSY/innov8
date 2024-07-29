@@ -22,6 +22,9 @@ import { WaveComponent } from './components/wave/wave.component';
 import { ChooseUsComponent } from './components/choose-us/choose-us.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -48,12 +51,19 @@ import { ContactComponent } from './components/contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     RouterModule.forRoot([], { // Add this line
       scrollPositionRestoration: 'enabled' // Enable scroll restoration
     })
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: API_KEY,
+      useValue: environment.googleApiKey,
+    },
+    GoogleSheetsDbService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

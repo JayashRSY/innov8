@@ -1,13 +1,26 @@
 :host {
   #services {
-    padding: 5rem;
+    padding: 5rem 0rem;
     color: white;
-    .moving-heading {
-      font-size: 3rem;
-      font-weight: 500;
-      text-align: center;
+    .marquee-container {
+      .moving-heading-1 {
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+        color: #62cdff;
+      }
+      .moving-heading-2 {
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+        color: black;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, #62cdff, #aa77ff);
+      }
     }
     .service-container {
+      padding: 2rem 5rem;
       display: flex;
       justify-content: space-evenly;
       justify-content: center;
@@ -19,8 +32,8 @@
         padding: 1rem;
         width: 347px;
         cursor: pointer;
-        background: linear-gradient(to top right, white, #f998fb);
-        box-shadow: 0px 0px 20px #f998fb;
+        background: linear-gradient(to top right, #c9c9c9, #f7f7f7);
+        // box-shadow: 0px 0px 20px #f998fb;
         border: 1px sold black;
 
         h3 {
@@ -32,59 +45,64 @@
           font-weight: 300;
         }
       }
-
-      .service:first-child {
-        background: linear-gradient(to top right, white, #f998fb);
-        box-shadow: 0px 0px 20px #f998fb;
-      }
-      .service:nth-child(2) {
-        background: linear-gradient(to top right, white, #67cd54);
-        box-shadow: 0px 0px 20px #67cd54;
+      .service:hover {
+        background: linear-gradient(to top right, #454545, #2c2c2c);
+        color: white;
+        box-shadow: 0px 0px 100px white;
       }
 
-      .service:nth-child(3) {
-        background: linear-gradient(to top right, white, #989cfb);
-        box-shadow: 0px 0px 20px #989cfb;
-      }
+      // .service:first-child {
+      //   background: linear-gradient(to top right, white, #f998fb);
+      //   box-shadow: 0px 0px 20px #f998fb;
+      // }
+      // .service:nth-child(2) {
+      //   background: linear-gradient(to top right, white, #67cd54);
+      //   box-shadow: 0px 0px 20px #67cd54;
+      // }
 
-      .service:nth-child(4) {
-        background: linear-gradient(to top right, white, #f2c274);
-        box-shadow: 0px 0px 20px #f2c274;
-      }
+      // .service:nth-child(3) {
+      //   background: linear-gradient(to top right, white, #989cfb);
+      //   box-shadow: 0px 0px 20px #989cfb;
+      // }
 
-      .service:nth-child(5) {
-        background: linear-gradient(to top right, white, #54becd);
-        box-shadow: 0px 0px 20px #54becd;
-      }
+      // .service:nth-child(4) {
+      //   background: linear-gradient(to top right, white, #f2c274);
+      //   box-shadow: 0px 0px 20px #f2c274;
+      // }
 
-      .service:nth-child(6) {
-        background: linear-gradient(to top right, white, #fb989e);
-        box-shadow: 0px 0px 20px #fb989e;
-      }
+      // .service:nth-child(5) {
+      //   background: linear-gradient(to top right, white, #54becd);
+      //   box-shadow: 0px 0px 20px #54becd;
+      // }
 
-      .service:hover:first-child {
-        background: #f998fb;
-      }
+      // .service:nth-child(6) {
+      //   background: linear-gradient(to top right, white, #fb989e);
+      //   box-shadow: 0px 0px 20px #fb989e;
+      // }
 
-      .service:hover:nth-child(2) {
-        background: #67cd54;
-      }
+      // .service:hover:first-child {
+      //   background: #f998fb;
+      // }
 
-      .service:hover:nth-child(3) {
-        background: #989cfb;
-      }
+      // .service:hover:nth-child(2) {
+      //   background: #67cd54;
+      // }
 
-      .service:hover:nth-child(4) {
-        background: #f2c274;
-      }
+      // .service:hover:nth-child(3) {
+      //   background: #989cfb;
+      // }
 
-      .service:hover:nth-child(5) {
-        background: #54becd;
-      }
+      // .service:hover:nth-child(4) {
+      //   background: #f2c274;
+      // }
 
-      .service:hover:nth-child(6) {
-        background: #fb989e;
-      }
+      // .service:hover:nth-child(5) {
+      //   background: #54becd;
+      // }
+
+      // .service:hover:nth-child(6) {
+      //   background: #fb989e;
+      // }
     }
   }
 }
