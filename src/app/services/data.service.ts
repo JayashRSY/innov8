@@ -11,8 +11,9 @@ export class DataService {
 
   constructor(private http: HttpClient, private googleSheetsDbService: GoogleSheetsDbService) { }
 
-  getWorkData(range: string): Observable<any> {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${environment.spreadsheetId}/?key=${environment.googleApiKey}`;
+  getWorkData(): Observable<any> {
+    const sheetName = 'Sheet1'
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${environment.spreadsheetId}/values/${sheetName}?key=${environment.googleApiKey}`;
     return this.http.get(url);
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { DataService } from 'src/app/services/data.service';
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-work-section',
@@ -21,6 +21,7 @@ export class WorkSectionComponent {
   dots = new Array(5);
   activeIndex: number | null = null;
   intervalId: any;
+  currentIndex = 0;
   constructor(private _dataService: DataService, private googleSheetsDbService: GoogleSheetsDbService) { }
   ngOnInit(): void {
     this.fetchData();
@@ -33,23 +34,34 @@ export class WorkSectionComponent {
     }, 3000);
   }
   fetchData(): void {
-    // this._dataService.getWorkData('Sheet1!A1: D10').subscribe((response: any) => {
-    //   this.data = response.values;
-    //   console.log("🚀 ~ file: work-section.component.ts:22 ~ response:", response);
-    // });
-    this.googleSheetsDbService.get(
-      environment.spreadsheetId,
-      "Sheet1",
-      this.attributesMapping
-    ).subscribe(res => {
-      this.works = res
-      this.data = res
+    this._dataService.getWorkData().subscribe((res: any) => {
+      console.log("🚀 ~ file: work-section.component.ts:22 ~ response:", res);
+      this.works = this.formatSheetData(res.values);
+      this.data = this.works
+      console.log("🚀 ~ file: work-section.component.ts:41 ~ this.works:", this.works);
       this.onDotClick(0)
-    })
+    });
+    // this.googleSheetsDbService.get(
+    //   environment.spreadsheetId,
+    //   "Sheet1",
+    //   this.attributesMapping
+    // ).subscribe(res => {
+    //   this.works = res
+    //   this.data = res
+    //   this.onDotClick(0)
+    // })
+  }
+  private formatSheetData(data: any[]): any[] {
+    const headers = data[0];
+    return data.slice(1).map(row => {
+      const formattedRow: any = {};
+      row.forEach((cell: any, index: number) => {
+        formattedRow[headers[index]] = cell;
+      });
+      return formattedRow;
+    });
   }
 
-
-  currentIndex = 0;
 
   onDotClick(index: number) {
     this.currentIndex = index;
