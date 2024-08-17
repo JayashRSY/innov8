@@ -1,5 +1,6 @@
 :host {
   color: white;
+  font-weight: 500;
   #choose-us {
     display: flex;
     flex-direction: column;
@@ -9,21 +10,26 @@
     .title {
       margin-bottom: 2rem;
     }
-    .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
-      background-color: black;
-      background: linear-gradient(to top right, #454545, #2c2c2c);
-
-      padding: 50px 20px;
+    .grad-box {
       margin: 5px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      &:hover {
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+    }
+    .box {
+      .box-card {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to top right, #454545, #2c2c2c);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        background-color: black;
+
+        padding: 60px 30px;
+        // margin: 5px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
       }
     }
 

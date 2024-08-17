@@ -21,10 +21,12 @@
 
     <div class="service-container">
         <div *ngFor="let service of services"
-            class="service animated-box in"
+            class="grad-box m-4"
             [routerLink]="service.routerLink">
-            <h2>{{service.title}}</h2>
-            <p>{{service.description}}</p>
+            <div class="service service-card">
+                <h2>{{service.title}}</h2>
+                <p>{{service.description}}</p>
+            </div>
         </div>
     </div>
 </div>

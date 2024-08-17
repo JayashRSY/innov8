@@ -14,7 +14,7 @@ export class HeaderComponent {
     { section: 'about', label: 'About' },
     { section: 'works', label: 'Works' },
     { section: 'services', label: 'Services' },
-    { section: 'footer', label: 'Contact' }
+    // { section: 'footer', label: 'Contact' }
   ];
 
 

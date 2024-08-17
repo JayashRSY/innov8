@@ -4,7 +4,7 @@
     color: white;
     height: 100vh;
     padding-top: 30vh;
-    background: radial-gradient(circle, #a6caff -100%, black 40%);
+    background: radial-gradient(circle, #609af0 -100%, black 45%);
     .title {
       width: auto;
       text-align: center;
@@ -48,6 +48,14 @@
       img:hover {
         transform: scale(1.1);
       }
+    }
+    .img-boat {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
     }
     app-wave {
       position: absolute;
