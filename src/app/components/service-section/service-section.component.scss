@@ -25,11 +25,14 @@
       justify-content: space-evenly;
       justify-content: center;
       flex-wrap: wrap;
+      .grad-box {
+        border-radius: 17px;
+      }
       .service {
-        border-radius: 10px;
         color: black;
-        margin: 2rem;
-        padding: 1rem;
+        border-radius: 15px;
+        height: 100%;
+        padding: 2rem;
         width: 347px;
         cursor: pointer;
         background: linear-gradient(to top right, #c9c9c9, #f7f7f7);

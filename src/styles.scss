@@ -3,8 +3,8 @@
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 // @import "animate.css";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 $c-dark-grey: #262626;
 $c-blue: #62cdff;
@@ -13,7 +13,7 @@ $c-light-grey: #e3e4e6;
 
 html,
 body {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   font-weight: 100;
   font-style: normal;
   margin: 0;
@@ -21,10 +21,11 @@ body {
   background-color: $c-dark-grey;
 }
 
-ul, ol {
-    list-style-type: none; /* Removes bullets from unordered lists and numbers from ordered lists */
-    padding: 0;            /* Removes default padding */
-    margin: 0;             /* Removes default margin */
+ul,
+ol {
+  list-style-type: none; /* Removes bullets from unordered lists and numbers from ordered lists */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
 }
 
 .btn-1 {
@@ -482,5 +483,63 @@ ul, ol {
       transform: translateY(-10px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+  }
+}
+
+// ANIMATED box gradient
+
+.grad-box {
+  padding: 2px;
+  background: linear-gradient(270deg, #62cdff, #aa77ff);
+  background-size: 400% 400%;
+
+  -webkit-animation: GradBoxAnimation 5s ease infinite;
+  -moz-animation: GradBoxAnimation 5s ease infinite;
+  -o-animation: GradBoxAnimation 5s ease infinite;
+  animation: GradBoxAnimation 5s ease infinite;
+}
+
+@-webkit-keyframes GradBoxAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes GradBoxAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes GradBoxAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes GradBoxAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

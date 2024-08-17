@@ -1,6 +1,7 @@
 :host {
   #references {
     padding: 0rem 5rem 5rem 5rem;
+    font-weight: 500;
 
     color: white;
 
@@ -35,8 +36,7 @@
       }
     }
     .card {
-      border: 1px solid black;
-      border-radius: 5px;
+      border-radius: 10px;
       .card-body {
         font-weight: 500;
       }
@@ -53,6 +53,52 @@
       object-fit: cover;
       border: 2px solid #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .grad-box {
+      border-radius: 12px;
+    }
+
+    hr {
+      height: 4px; /* Adjust the height of the hr */
+      border: none; /* Remove the default border */
+      background: linear-gradient(90deg, #a168fe, #4ec7ff);
+      background-size: 200% 100%; /* Double the background width for smooth animation */
+      animation: colorChange 3s linear infinite;
+      opacity: 1;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+    .vertical-hr {
+      padding: 2px !important;
+      position: absolute;
+      // top: 0;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 0.5px; /* Thickness of the line */
+      height: 50%; /* Length of the line, adjust as needed */
+      background: linear-gradient(
+        180deg,
+        #a168fe,
+        #4ec7ff
+      ); /* Vertical gradient */
+      animation: colorChangeV 3s infinite alternate;
+    }
+
+    @keyframes colorChangeV {
+      0% {
+        background: linear-gradient(180deg, #a168fe, #4ec7ff);
+      }
+      100% {
+        background: linear-gradient(180deg, #4ec7ff, #a168fe);
+      }
     }
   }
 }
