@@ -12,8 +12,14 @@
       }
     }
 
+    .grad-box{
+      border-radius: 12px;
+    }
+
     .vision-card {
+      border-radius: 10px;
       background: url("../../../../public/assets/images/Vector.svg");
+      background-color: #262626;
       .card-container {
         display: flex;
         width: 100%;
